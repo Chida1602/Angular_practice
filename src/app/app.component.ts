@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+
   //string interpolation
   title = 'own_project';
   city:string = "chennai";
@@ -36,6 +36,25 @@ export class AppComponent {
   haserror:boolean=true;
 
   //event binding
+  counter:number= 0;
+  increment(){
+    this.counter+=1;
+  };
+  decrease(){
+    this.counter-=1
+  };
+  my_name="chida";
+  changename(e:any){
+    this.my_name=e.target.value
+  };
 
+  //two-way data binding
+  place="hyderabad";
+  updateCity(){
+  this.place="chennai"  
+  };
+
+  //directives
+  movies=["Bahubali","salaar","project-k"]
 
 }
